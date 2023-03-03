@@ -23,11 +23,12 @@ export PATH="$PATH:$HOME/.cargo/env"
   eval "$(rbenv init -)"
 
 # goenv
-export GOENV_ROOT="$HOME/.goenv"
-export PATH="$GOENV_ROOT/bin:$PATH"
-eval "$(goenv init -)"
-export PATH="$GOROOT/bin:$PATH"
-export PATH="$PATH:$GOPATH/bin"
+[[ -d ~/.goenv  ]] && \
+  export GOENV_ROOT="$HOME/.goenv" \
+  export PATH="$GOENV_ROOT/bin:$PATH" \
+  eval "$(goenv init -)" \
+  export PATH="$GOROOT/bin:$PATH" \
+  export PATH="$PATH:$GOPATH/bin"
 
 # pip3
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
