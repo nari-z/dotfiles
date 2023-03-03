@@ -1,0 +1,2 @@
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
