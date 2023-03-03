@@ -1,16 +1,21 @@
-export PATH="$HOME/.anyenv/bin:$PATH"
 export EDITOR=vi
+
+# brew
+eval $(/opt/homebrew/bin/brew shellenv)
+
+# direnv
 eval "$(direnv hook zsh)"
+
+# anyenv
+export PATH="$HOME/.anyenv/bin:$PATH"
 eval "$(anyenv init -)"
+
+# starship
+eval "$(starship init zsh)"
 
 # rust
 export PATH="$PATH:$HOME/.cargo/env"
 
-# draw.io
-alias drawio='/Applications/draw.io.app/Contents/MacOS/draw.io'
-
-# starship
-eval "$(starship init zsh)"
 
 # rbenv
 [[ -d ~/.rbenv  ]] && \
@@ -31,6 +36,7 @@ export PATH=$PATH:$HOME/Library/Python/3.9/bin
 alias "testcontainer ps"='docker ps --filter "label=env=test"'
 alias dc='docker compose'
 alias git-cz='npx git-cz'
+alias drawio='/Applications/draw.io.app/Contents/MacOS/draw.io'
 
 # time format
 TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*Us\nsystem  : %*Ss\ntotal   : %*Es\n========================\n'
