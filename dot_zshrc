@@ -32,3 +32,6 @@ alias "testcontainer ps"='docker ps --filter "label=env=test"'
 alias dc='docker compose'
 alias git-cz='npx git-cz'
 
+# time format
+TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*Us\nsystem  : %*Ss\ntotal   : %*Es\n========================\n'
+
