@@ -41,3 +41,6 @@ alias drawio='/Applications/draw.io.app/Contents/MacOS/draw.io'
 # time format
 TIMEFMT=$'\n\n========================\nProgram : %J\nCPU     : %P\nuser    : %*Us\nsystem  : %*Ss\ntotal   : %*Es\n========================\n'
 
+# ghq command
+alias g='cd "$(ghq list --full-path | peco)"'
+
