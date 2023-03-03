@@ -1,7 +1,10 @@
 [ghq]
 	root = ~/sarahrepo
 [credential]
-	helper = osxkeychain
+	# helper = osxkeychain
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
 [user]
 	name = nari-z
 	email = "{{ .git_email }}"
