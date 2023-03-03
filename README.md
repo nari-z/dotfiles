@@ -12,7 +12,8 @@ brew install chezmoi
 ## Setup
 
 ```bash
-chezmoi init git@github.com:nari-z/dotfiles.git
+chezmoi init https://github.com/nari-z/dotfiles.git
+chezmoi apply
 brew bundle
 ```
 
