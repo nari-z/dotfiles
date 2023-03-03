@@ -1,0 +1,4 @@
+.go-version
+.DS_Store
+.envrc
+.vscode/
