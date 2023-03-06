@@ -30,6 +30,10 @@ export PATH="$PATH:$HOME/.cargo/env"
   export PATH="$GOROOT/bin:$PATH" \
   export PATH="$PATH:$GOPATH/bin"
 
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 # pip3
 export PATH=$PATH:$HOME/Library/Python/3.9/bin
 
