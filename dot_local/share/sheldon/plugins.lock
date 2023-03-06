@@ -1,0 +1,24 @@
+version = "0.7.1"
+home = "/Users/nariz"
+config_dir = "/Users/nariz/.config/sheldon"
+data_dir = "/Users/nariz/.local/share/sheldon"
+config_file = "/Users/nariz/.config/sheldon/plugins.toml"
+
+[[plugins]]
+name = "zsh-defer"
+source_dir = "/Users/nariz/.local/share/sheldon/repos/github.com/romkatv/zsh-defer"
+files = ["/Users/nariz/.local/share/sheldon/repos/github.com/romkatv/zsh-defer/zsh-defer.plugin.zsh"]
+apply = ["source"]
+
+[[plugins]]
+name = "zsh-autosuggestions"
+source_dir = "/Users/nariz/.local/share/sheldon/repos/github.com/zsh-users/zsh-autosuggestions"
+files = ["/Users/nariz/.local/share/sheldon/repos/github.com/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh"]
+apply = ["defer"]
+
+[templates]
+PATH = "export PATH=\"{{ dir }}:$PATH\""
+path = "path=( \"{{ dir }}\" $path )"
+fpath = "fpath=( \"{{ dir }}\" $fpath )"
+source = "{% for file in files %}source \"{{ file }}\"\n{% endfor %}"
+defer = "{% for file in files %}zsh-defer source \"{{ file }}\"\n{% endfor %}"

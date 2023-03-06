@@ -3,6 +3,9 @@ export EDITOR=vi
 # brew
 eval $(/opt/homebrew/bin/brew shellenv)
 
+# sheldon
+eval "$(sheldon source)"
+
 # direnv
 eval "$(direnv hook zsh)"
 
